@@ -1,12 +1,17 @@
 export { MAX_PLAYERS } from "./constants.js";
 
+export { appendExpressionToken } from "./actions/appendExpressionToken.js";
+export { clearExpression } from "./actions/clearExpression.js";
 export { createGame } from "./actions/createGame.js";
 export { getClientStateAndClearEvents } from "./actions/getClientStateAndClearEvents.js";
 export { getEventsAndClearAcknowledged } from "./actions/getEventsAndClearAcknowledged.js";
 export { joinGame } from "./actions/joinGame.js";
 export { leaveGame } from "./actions/leaveGame.js";
+export { reportReadyForNextRound } from "./actions/reportReadyForNextRound.js";
 export { sendChat } from "./actions/sendChat.js";
+export { skip } from "./actions/skip.js";
 export { startGame } from "./actions/startGame.js";
+export { submitExpression } from "./actions/submitExpression.js";
 
 export type { Card } from "./types/Card.js";
 export type { ChatMessage } from "./types/ChatMessage.js";

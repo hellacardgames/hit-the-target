@@ -3,6 +3,12 @@ import type { Client } from "./createClient.js";
 
 export type { Client };
 
+export type AppendExpressionResult = Awaited<
+  ReturnType<Client["appendExpressionToken"]>
+>;
+export type ClearExpressionResult = Awaited<
+  ReturnType<Client["clearExpression"]>
+>;
 export type CreateGameResult = Awaited<ReturnType<Client["createGame"]>>;
 export type GetClientStateAndClearEventsResult = Awaited<
   ReturnType<Client["getClientStateAndClearEvents"]>
@@ -15,8 +21,15 @@ export type GetJoinableGamesResult = Awaited<
 >;
 export type JoinGameResult = Awaited<ReturnType<Client["joinGame"]>>;
 export type LeaveGameResult = Awaited<ReturnType<Client["leaveGame"]>>;
+export type ReportReadyForNextRoundResult = Awaited<
+  ReturnType<Client["reportReadyForNextRound"]>
+>;
 export type SendChatResult = Awaited<ReturnType<Client["sendChat"]>>;
+export type SkipResult = Awaited<ReturnType<Client["skip"]>>;
 export type StartGameResult = Awaited<ReturnType<Client["startGame"]>>;
+export type SubmitExpressionResult = Awaited<
+  ReturnType<Client["submitExpression"]>
+>;
 
 export type {
   Card,

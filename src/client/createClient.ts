@@ -4,4 +4,25 @@ import type { Server } from "../server/createServer.js";
 
 export type Client = ReturnType<typeof createClient>;
 
-export const createClient = createClientFactory<Server, Manager>({});
+export const createClient = createClientFactory<Server, Manager>({
+  appendExpressionToken: (gameId: string, playerId: string) => ({
+    gameId,
+    playerId,
+  }),
+  clearExpression: (gameId: string, playerId: string) => ({
+    gameId,
+    playerId,
+  }),
+  reportReadyForNextRound: (gameId: string, playerId: string) => ({
+    gameId,
+    playerId,
+  }),
+  skip: (gameId: string, playerId: string) => ({
+    gameId,
+    playerId,
+  }),
+  submitExpression: (gameId: string, playerId: string) => ({
+    gameId,
+    playerId,
+  }),
+});
