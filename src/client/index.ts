@@ -3,8 +3,12 @@ import type { Client } from "./createClient.js";
 
 export type { Client };
 
-export type AppendExpressionResult = Awaited<
-  ReturnType<Client["appendExpressionToken"]>
+export type AppendCardResult = Awaited<ReturnType<Client["appendCard"]>>;
+export type AppendOperatorResult = Awaited<
+  ReturnType<Client["appendOperator"]>
+>;
+export type AppendParenthesisResult = Awaited<
+  ReturnType<Client["appendParenthesis"]>
 >;
 export type ClearExpressionResult = Awaited<
   ReturnType<Client["clearExpression"]>
@@ -36,4 +40,6 @@ export type {
   ChatMessage,
   ClientState,
   GameEvent,
+  Operator,
+  Parenthesis,
 } from "../game/index.js";

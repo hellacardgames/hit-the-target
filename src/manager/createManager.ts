@@ -1,6 +1,8 @@
 import { createManagerFactory } from "@hellacardgames/lib";
 import {
-  appendExpressionToken,
+  appendCard,
+  appendOperator,
+  appendParenthesis,
   clearExpression,
   createGame,
   getClientStateAndClearEvents,
@@ -27,7 +29,9 @@ export const createManager = createManagerFactory({
   sendChat,
   startGame,
   gameplayActions: {
-    appendExpressionToken,
+    appendCard,
+    appendOperator,
+    appendParenthesis,
     clearExpression,
     reportReadyForNextRound,
     skip,

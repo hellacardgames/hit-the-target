@@ -1,3 +1,4 @@
+import type { Card } from "@hellacardgames/lib";
 import type { ChatMessage } from "./ChatMessage.js";
 import type { Player } from "./Player.js";
 
@@ -21,6 +22,9 @@ export type StartedGame = {
   readonly chatMessages: readonly ChatMessage[];
   readonly players: readonly Player[];
   readonly adminId: string;
+  readonly deck: readonly Card[];
+  readonly sourceCards: readonly Card[];
+  readonly targetCard: Card;
 };
 
 export type CompletedGame = {
@@ -41,4 +45,7 @@ export type ForfeitedGame = {
   readonly chatMessages: readonly ChatMessage[];
   readonly players: readonly Player[];
   readonly adminId: string;
+  readonly deck: readonly Card[];
+  readonly sourceCards: readonly Card[];
+  readonly targetCard: Card;
 };

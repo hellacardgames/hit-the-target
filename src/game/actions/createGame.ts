@@ -8,6 +8,11 @@ export function createGame(userId: string, username: string) {
     userId,
     username,
     events: [],
+    status: "waitingForGameToStart",
+    skipped: false,
+    expressionTokens: [],
+    numCardsCollected: 0,
+    roundWinner: false,
   };
 
   const createdAt = Date.now();
