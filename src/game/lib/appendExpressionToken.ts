@@ -1,5 +1,5 @@
 import {
-  addItemToCollection,
+  addItem,
   emitEventToOtherPlayer,
   emitEventToPlayer,
   getPlayer,
@@ -15,7 +15,7 @@ export function appendExpressionToken(
 ): StartedGame {
   const { player } = getPlayer(game, playerId);
 
-  const expressionTokens = addItemToCollection(player.expressionTokens, token);
+  const expressionTokens = addItem(player.expressionTokens, token);
   game = updatePlayer(game, player.id, (p) => ({ ...p, expressionTokens }));
 
   game = emitEventToPlayer(game, player.id, {

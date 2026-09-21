@@ -1,7 +1,4 @@
-import {
-  takeLastItemFromCollection,
-  takeLastItemsFromCollection,
-} from "@hellacardgames/lib";
+import { takeLastItem, takeLastItems } from "@hellacardgames/lib";
 import { NUM_SOURCE_CARDS } from "../constants.js";
 import type { Card } from "@hellacardgames/lib";
 
@@ -13,9 +10,9 @@ type DealCardsResult = {
 
 export function dealCards(deck: readonly Card[]): DealCardsResult {
   const { items: sourceCards, collection: deckAfterSourceCards } =
-    takeLastItemsFromCollection(deck, NUM_SOURCE_CARDS);
+    takeLastItems(deck, NUM_SOURCE_CARDS);
   const { item: targetCard, collection: remainingDeck } =
-    takeLastItemFromCollection(deckAfterSourceCards);
+    takeLastItem(deckAfterSourceCards);
 
   return {
     deck: remainingDeck,
